@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class L10_Logical_operators {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the values of a,b and c one by one  :");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if(a>b && a<c){
+            System.out.println("a is between b and c");
+        }
+        else{
+            System.out.println("a is  not between b and c");
+        }
+        if (a>b && a>c && a!= b && a!= c) {
+            System.out.println("a is greater than b or a is greater than c");
+        }
+        else if(b>a && b>c && b!= a && b!= c) {
+            System.out.println("b is greater than a or b is greater than c");
+        }
+        else {
+            System.out.println("c is greater than a and c is greater than b");
+        }
+    }
+}
