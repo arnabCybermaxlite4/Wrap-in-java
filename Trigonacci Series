@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TribonacciSeries {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter how many Tribonacci numbers to print: ");
+        int n = scanner.nextInt();
+
+        // First three Tribonacci numbers
+        int t0 = 0, t1 = 1, t2 = 1;
+
+        System.out.print("Tribonacci Series: ");
+
+        if (n >= 1) System.out.print(t0 + " ");
+        if (n >= 2) System.out.print(t1 + " ");
+        if (n >= 3) System.out.print(t2 + " ");
+
+        for (int i = 3; i < n; i++) {
+            int t3 = t0 + t1 + t2;
+            System.out.print(t3 + " ");
+            t0 = t1;
+            t1 = t2;
+            t2 = t3;
+        }
+
+        scanner.close();
+    }
+}
