@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class DayScheduler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a day of the week: ");
+        String day = scanner.nextLine().toLowerCase(); // convert to lowercase
+
+        switch (day) {
+            case "monday":
+                System.out.println("📚 Study Data Structures.");
+                break;
+            case "tuesday":
+                System.out.println("💻 Practice coding problems.");
+                break;
+            case "wednesday":
+                System.out.println("📝 Attend DBMS lecture.");
+                break;
+            case "thursday":
+                System.out.println("🎯 Revise Algorithms.");
+                break;
+            case "friday":
+                System.out.println("🔬 Work on lab assignments.");
+                break;
+            case "saturday":
+                System.out.println("🏃 Outdoor activities and relaxation.");
+                break;
+            case "sunday":
+                System.out.println("🛌 Rest day! Refresh yourself.");
+                break;
+            default:
+                System.out.println("❌ Invalid day entered. Please try again.");
+        }
+
+        scanner.close();
+    }
+}
