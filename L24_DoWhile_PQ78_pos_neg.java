@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+// Program to count positive, negative numbers and zeros using do-while loop
+public class L24_DoWhile_PQ78_pos_neg {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int positive = 0, negative = 0, zeros = 0;
+        char choice;
+        do {
+            System.out.print("Enter a number: ");
+            int num = sc.nextInt();
+
+            if (num > 0) {
+                positive++;
+            } else if (num < 0) {
+                negative++;
+            } else {
+                zeros++;
+            }
+            System.out.print("Do you want to enter another number? (y/n): ");
+            choice = sc.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
+        System.out.println("Count of positive numbers: " + positive);
+        System.out.println("Count of negative numbers: " + negative);
+        System.out.println("Count of zeros: " + zeros);
+    }
+}
